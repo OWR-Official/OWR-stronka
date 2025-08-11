@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rekrutacja - OWR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Rekrutacja do OWR</h1>
+  </header>
+
+  <main>
+    <p>Wypełnij poniższy formularz, aby dołączyć do Obozu Wspólnoty Robotniczej.</p>
+    
+    <form action="https://formspree.io/f/mjkojlnl" method="POST" class="form-rekrutacja">
+      <label>
+        Imię i nazwisko:
+        <input type="text" name="name" required>
+      </label>
+      
+      <label>
+        E-mail:
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        Dlaczego chcesz dołączyć?
+        <textarea name="message" required></textarea>
+      </label>
+
+      <button type="submit">Wyślij zgłoszenie</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>OWR &copy; 2025</p>
+  </footer>
+</body>
+</html>
