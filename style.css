@@ -1,0 +1,51 @@
+
+/* style.css - estetyka: czerwień, czerń, złoto; mocna typografia */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+:root{
+  --red:#b70000;
+  --black:#0b0b0b;
+  --gold:#ffd24d;
+  --bg:#0f0f0f;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:#fff;font-family:Roboto, Arial, sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--gold);text-decoration:none}
+header.site-header{background:linear-gradient(90deg,var(--red),#8a0000);padding:12px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:18px;border-bottom:4px solid rgba(0,0,0,0.4)}
+.header-brand{display:flex;align-items:center;gap:12px}
+.header-brand img{height:70px;width:auto;display:block;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+.header-title h1{font-family:Oswald, Impact, sans-serif;margin:0;color:var(--gold);letter-spacing:1px;font-size:20px}
+.header-title p{margin:0;color:#ffeab2;font-size:13px}
+
+nav.main-nav{margin-left:auto}
+nav.main-nav a{display:inline-block;margin-left:10px;padding:8px 12px;border-radius:6px;font-weight:700;color:#fff;opacity:0.95}
+nav.main-nav a:hover{background:rgba(0,0,0,0.15);transform:translateY(-3px)}
+
+.container{max-width:1100px;margin:22px auto;padding:0 16px}
+
+.hero{background:linear-gradient(180deg, rgba(183,0,0,0.07), transparent);padding:28px;border-left:6px solid var(--red);border-radius:6px;color:#fff;margin-bottom:18px}
+.hero h2{font-family:Oswald, sans-serif;font-size:28px;margin:0 0 8px;color:var(--red)}
+.hero p{margin:0;color:#ffd;opacity:0.95}
+
+.manifest-frame{background:linear-gradient(180deg,#0b0b0b,#171717);border:6px solid var(--red);padding:18px;border-radius:8px;height:520px;overflow:auto;color:#ffecc0;line-height:1.6}
+.manifest-frame h2,h3{color:var(--gold);font-family:Oswald, sans-serif}
+.manifest-frame h4{color:var(--red)}
+
+.manifest-frame::-webkit-scrollbar{width:12px}
+.manifest-frame::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold),var(--red));border-radius:10px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
+.card{background:#0f0f0f;padding:12px;border-radius:8px;border-left:6px solid var(--red);box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+
+.team-avatar{width:100%;height:160px;object-fit:cover;border-radius:6px;background:#222;display:block;margin-bottom:8px}
+
+footer.site-footer{margin-top:28px;padding:14px 20px;background:#080808;color:#666;text-align:center;border-top:4px solid rgba(183,0,0,0.12)}
+.small{font-size:13px;color:#bbb}
+
+/* Responsywność */
+@media(max-width:800px){
+  .header-title h1{font-size:18px}
+  nav.main-nav a{padding:8px 10px;font-size:14px}
+  .manifest-frame{height:420px}
+}
